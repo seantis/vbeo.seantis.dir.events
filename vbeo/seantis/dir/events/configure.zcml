@@ -5,6 +5,7 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
     i18n_domain="vbeo.seantis.dir.events">
 
     <i18n:registerTranslations directory="locales" />
@@ -43,5 +44,8 @@
 
     <!-- Diazo Theme -->
     <plone:static name="vbeo.seantis.dir.events.theme" directory="theme" type="theme" />
+
+    <!-- Custom Openlayers Skin -->
+    <cmf:registerDirectory name="vbeo_openlayers" recursive="True"/>
 
 </configure>
