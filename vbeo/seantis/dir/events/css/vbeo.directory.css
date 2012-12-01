@@ -73,3 +73,7 @@ select {
 #ftw-edit-bar, #ftw-edit-bar * {
    border-color: #ddd !important;   
 }
+
+div.olControlLayerSwitcher .layersDiv, div.olControlLayerSwitcher .layersDiv * {
+   background-color: #333;
+}

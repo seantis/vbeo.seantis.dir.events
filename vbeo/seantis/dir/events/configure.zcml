@@ -47,5 +47,8 @@
 
     <!-- Custom Openlayers Skin -->
     <cmf:registerDirectory name="vbeo_openlayers" recursive="True"/>
+    
+    <!-- Custom Markers -->
+    <browser:resourceDirectory name="seantis.dir.base.images" layer="vbeo.seantis.dir.events.interfaces.IVbeoLayer" directory="images" />
 
 </configure>
