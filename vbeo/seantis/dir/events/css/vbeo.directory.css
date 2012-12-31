@@ -20,7 +20,7 @@ h1.documentFirstHeading,
     text-decoration: none;
 }
 
-.documentByLine, #directorySearch, #ftw-edit-bar {
+.documentByLine, #directorySearch, #edit-bar {
     background-color: #efefef !important;   
 }
 
@@ -70,7 +70,7 @@ select {
    border-color: #b30e1a
 }
 
-#ftw-edit-bar, #ftw-edit-bar * {
+#edit-bar, #edit-bar * {
    border-color: #ddd !important;   
 }
 
