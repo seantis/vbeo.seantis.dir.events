@@ -14,9 +14,9 @@ setup(name='vbeo.seantis.dir.events',
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
-        "Framework :: Plone",
-        "Programming Language :: Python",
-        ],
+          "Framework :: Plone",
+          "Programming Language :: Python",
+      ],
       keywords='',
       author='Seantis GmbH',
       author_email='info@seantis.ch',
@@ -27,6 +27,7 @@ setup(name='vbeo.seantis.dir.events',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
+          'setuptools',
           'seantis.dir.events',
           'izug.basetheme',
           'plone.app.theming'
