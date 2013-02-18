@@ -10,8 +10,8 @@ class GuidleConfig(grok.MultiAdapter):
     grok.implements(IGuidleConfig)
 
     url = ("http://www.guidle.com/dpAccess.jsf"
-           "?id=193352638&language=de&dateOption=NA&tagIds=23400386"
-           "&where=38421957&sorting=ungrouped&primaryTreeId=23400386"
+           "?id=193352638&language=de&dateOption=NA&primaryTreeId=196238674"
+           "&tagIds=196238674&where=38421957&sorting=ungrouped"
            "&locationTreeId=13181&template=xml2")
 
     def __init__(self, context, request):
