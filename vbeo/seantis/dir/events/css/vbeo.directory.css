@@ -100,23 +100,3 @@ select {
 div.olControlLayerSwitcher .layersDiv, div.olControlLayerSwitcher .layersDiv * {
    background-color: #333;
 }
-
-/* remove gradients */
-#portal-globalnav li,
-.context,
-.formControls .actionButtons .button,
-.documentEditable * .context,
-input[type=button].context,
-input[type=submit].context,
-input#form-buttons-button_add,
-input#form-buttons-button_assign,
-input#form-buttons-button_search,
-input#form-buttons-button_checkin,
-input#form-buttons-save,
-input#form-buttons-button_submit,
-input#form-buttons-button_archive {
-    background: none;
-    filter: none;
-    -ms-filter: none;
-    background-color: white;
-}
