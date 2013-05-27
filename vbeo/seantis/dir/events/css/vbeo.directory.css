@@ -100,3 +100,8 @@ select {
 div.olControlLayerSwitcher .layersDiv, div.olControlLayerSwitcher .layersDiv * {
    background-color: #333;
 }
+
+.link-webcal a {
+   padding: 0.454em 0.909em 0.454em 1.454em !important;
+   background-position: -2px 4px !important;
+}
