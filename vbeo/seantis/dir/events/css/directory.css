@@ -509,8 +509,7 @@ input[type=submit],
 #content div.tabbedview-tabs ul.formTabs li a ,
 .listingBar a,
 #content a.datagridwidget-add-button {
-    background: none !important;
+    background: auto !important;
     filter: none !important;
     -ms-filter: none !important;
-    background-color: white !important;
 }
