@@ -105,3 +105,38 @@ div.olControlLayerSwitcher .layersDiv, div.olControlLayerSwitcher .layersDiv * {
    padding: 0.454em 0.909em 0.454em 1.454em !important;
    background-position: -2px 4px !important;
 }
+
+/* remove gradients */
+#portal-globalnav li,
+.context,
+.formControls .actionButtons .button,
+.documentEditable * .context,
+input[type=button].context,
+input[type=submit].context,
+input#form-buttons-button_add,
+input#form-buttons-button_assign,
+input#form-buttons-button_search,
+input#form-buttons-button_checkin,
+input#form-buttons-save,
+input#form-buttons-button_submit,
+input#form-buttons-button_archive,
+#portal-globalnav li.selected,
+#content button:focus,
+#content input[type=button]:focus,
+#content input[type=submit]:focus,
+#content button:hover,
+#content input[type=button]:hover,
+#content input[type=submit]:hover,
+#content div.tabbedview-tabs ul.formTabs li a.selected,
+#content div.tabbedview-tabs ul.formTabs li.ui-tabs-selected a,
+#content a.datagridwidget-add-button:hover ,
+button,
+input[type=button],
+input[type=submit],
+#content div.tabbedview-tabs ul.formTabs li a ,
+.listingBar a,
+#content a.datagridwidget-add-button {
+    background: auto !important;
+    filter: none !important;
+    -ms-filter: none !important;
+}

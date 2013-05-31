@@ -42,9 +42,6 @@
         description=""
         handler="vbeo.seantis.dir.events.setuphandlers.custom_setup" />
 
-    <!-- Diazo Theme -->
-    <plone:static name="vbeo.seantis.dir.events.theme" directory="theme" type="theme" />
-
     <!-- Custom Openlayers Skin -->
     <cmf:registerDirectory name="vbeo_openlayers" recursive="True"/>
     
