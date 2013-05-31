@@ -28,8 +28,8 @@
     <!-- Register an extension profile to make the product installable -->
     <genericsetup:registerProfile
         name="default"
-        title="vbeo.seantis.dir.events"
-        description="Integration of seantis.dir.events for Volkswirtschaft Berner Oberland"
+        title="Berneroberland-Tourismus Integration for Seantis Dir Events"
+        description="Guidle Import, Setup, Settings, Styles"
         directory="profiles/default"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         for="Products.CMFPlone.interfaces.IPloneSiteRoot" 
