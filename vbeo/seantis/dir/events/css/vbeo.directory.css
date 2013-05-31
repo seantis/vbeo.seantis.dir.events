@@ -48,8 +48,10 @@ h1.documentFirstHeading,
 }
 
 #directorySearch {
-    border-bottom: 1px solid black!important;
+    border-bottom: 1px solid black !important;
     padding-bottom: 20px;
+    margin-top: 0;
+    border-width: 0;
 }
 
 .navTreeItem a.navTreeCurrentItem {
