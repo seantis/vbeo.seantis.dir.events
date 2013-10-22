@@ -13,10 +13,7 @@ class GuidleConfig(grok.MultiAdapter):
     grok.adapts(IEventsDirectory, Interface)
     grok.implements(IGuidleConfig)
 
-    url = ("http://www.guidle.com/dpAccess.jsf"
-           "?id=193352638&language=de&dateOption=NA&primaryTreeId=196238674"
-           "&tagIds=196238674&where=38421957&sorting=ungrouped"
-           "&locationTreeId=13181&template=xml2")
+    url = "http://www.guidle.com/m_QpCBiK/Berner-Oberland/Veranstaltungen"
 
     classification = "Veranstaltungskalender MySwitzerland"
 
