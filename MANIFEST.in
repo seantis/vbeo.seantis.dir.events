@@ -1,7 +1,8 @@
-recursive-include vbeo *
-recursive-include docs *
-include *.md
-include *.rst
-include *.txt
-global-exclude *.mo
-global-exclude *.pyc
+graft */*/*/js
+graft */*/*/css
+graft */*/*/locales
+graft */*/*/profiles
+graft */*/*/templates
+global-include *.zcml
+global-include README.md
+global-include docs/*

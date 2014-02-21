@@ -1,26 +1,18 @@
 from setuptools import setup, find_packages
 import os
 
-name = 'vbeo.seantis.dir.events'
-description = (
-    "Integration of seantis.dir.events for Volkswirtschaft Berner Oberland."
-)
-version = '1.0rc2'
+version = '1.2b'  # aligned with seantis.dir.base
 
-
-def get_long_description():
-    readme = open('README.rst').read()
-    history = open(os.path.join('docs', 'HISTORY.rst')).read()
-    contributors = open(os.path.join('docs', 'CONTRIBUTORS.rst')).read()
-
-    # cut the part before the description to avoid repetition on pypi
-    readme = readme[readme.index(description) + len(description):]
-
-    return '\n'.join((readme, contributors, history))
-
-
-setup(name=name, version=version, description=description,
-      long_description=get_long_description(),
+setup(name='vbeo.seantis.dir.events',
+      version=version,
+      description=(
+          "Integration of seantis.dir.events "
+          "for Volkswirtschaft Berner Oberland"
+      ),
+      long_description=open("README.md").read() + "\n" +
+                       open(os.path.join("docs", "HISTORY.txt")).read(),
+      # Get more strings from
+      # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
           "Framework :: Plone",
           "Programming Language :: Python",
@@ -36,7 +28,7 @@ setup(name=name, version=version, description=description,
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'seantis.dir.events>=1.0rc1',
+          'seantis.dir.events',
           'izug.basetheme',
           'plone.app.theming'
       ],
