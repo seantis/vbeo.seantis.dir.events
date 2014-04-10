@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.2b'  # aligned with seantis.dir.base
+version = '1.0'
 
 setup(name='vbeo.seantis.dir.events',
       version=version,
