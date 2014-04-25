@@ -32,7 +32,7 @@
         description="Guidle Import, Setup, Settings, Styles"
         directory="profiles/default"
         provides="Products.GenericSetup.interfaces.EXTENSION"
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot" 
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
         />
 
     <!-- Run custom setup code -->
@@ -44,8 +44,19 @@
 
     <!-- Custom Openlayers Skin -->
     <cmf:registerDirectory name="vbeo_openlayers" recursive="True"/>
-    
+
     <!-- Custom Markers -->
     <browser:resourceDirectory name="seantis.dir.base.images" layer="vbeo.seantis.dir.events.interfaces.IVbeoLayer" directory="images" />
+
+    <!-- Upgrade steps -->
+    <genericsetup:upgradeStep
+      source="1"
+      destination="2"
+      title="Update to seantis.dir.events 1.2 "
+      description=""
+      profile="vbeo.seantis.dir.events:default"
+      handler=".upgrades.upgrade_1_to_2"
+      />
+
 
 </configure>
