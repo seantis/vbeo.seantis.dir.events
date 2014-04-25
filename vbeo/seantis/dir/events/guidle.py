@@ -1,19 +1,19 @@
 from five import grok
-from zope.interface import Interface
 
-from seantis.dir.events.interfaces import IEventsDirectory
-from seantis.dir.events.sources.guidle import IGuidleConfig
+from Products.CMFCore.utils import getToolByName
+from zope.app.component.hooks import getSite
+from zope import i18n
+
+from seantis.dir.events.interfaces import IGuidleClassifier
+from seantis.dir.events.sources.guidle import EventsSourceGuidle
 
 from seantis.dir.base.utils import cached_property
-from seantis.dir.events.utils import translate
 from vbeo.seantis.dir.events import _
 
 
-class GuidleConfig(grok.MultiAdapter):
-    grok.adapts(IEventsDirectory, Interface)
-    grok.implements(IGuidleConfig)
-
-    url = "http://www.guidle.com/m_QpCBiK/Berner-Oberland/Veranstaltungen"
+class VbeoGuidleClassfier(grok.Adapter):
+    grok.context(EventsSourceGuidle)
+    grok.provides(IGuidleClassifier)
 
     classification = "Veranstaltungskalender MySwitzerland"
 
@@ -35,17 +35,31 @@ class GuidleConfig(grok.MultiAdapter):
         }
 
         i18ndomain = 'vbeo.seantis.dir.events'
+        site = getSite()
+        lang = getToolByName(site, 'portal_languages').getDefaultLanguage()
 
         for tag in tagmap:
-            tagmap[tag] = translate(
-                self.request, tagmap[tag], domain=i18ndomain
+            tagmap[tag] = i18n.translate(
+                tagmap[tag], target_language=lang, domain=i18ndomain
             )
 
         return tagmap
 
-    def __init__(self, context, request):
-        self.context = context
-        self.request = request
+    def categories_by_tags(self, classification):
+        categories = set()
 
-    def on_event(self, root, offer, event):
-        pass
+        for tag in (c.attrib['name'] for c in classification.iterchildren()):
+            for key in self.tagmap:
+                if tag.startswith(key):
+                    categories.add(self.tagmap[key])
+
+        return categories
+
+    def classify(self, classifications):
+        categories = set()
+        for classification in classifications.iterchildren():
+            if classification.attrib['name'] != self.classification:
+                continue
+            categories = self.categories_by_tags(classification)
+
+        return categories
