@@ -1,6 +1,12 @@
 
 # Changelog
 
+1.1
+---
+
+- Add upgrade step for seantis.dir.events 1.2 [msom]
+
+
 1.0
 ---
 
