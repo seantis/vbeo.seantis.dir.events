@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1'
+version = '1.1.1'
 
 setup(name='vbeo.seantis.dir.events',
       version=version,
@@ -28,7 +28,7 @@ setup(name='vbeo.seantis.dir.events',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'seantis.dir.events',
+          'seantis.dir.events>=1.2',
           'izug.basetheme',
           'plone.app.theming'
       ],
