@@ -1,6 +1,13 @@
 
 # Changelog
 
+1.1.1
+-----
+
+- Add seantis.dir.events 1.2 dependency [msom]
+- Fix manifest file [msom]
+
+
 1.1
 ---
 
